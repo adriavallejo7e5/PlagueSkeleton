@@ -1,16 +1,13 @@
 package theplague.interfaces
 
+import theplague.logic.Player
+import theplague.logic.Territory
+
 interface IWorld{
+    val player: Player
     val width: Int
     val height: Int
-
-    /**
-     * Matrix of Iterrotires
-     */
-    val territories : List<List<ITerritory>>
-
-    val player : IPlayer
-
+    val territories: MutableList<List<Territory>>
     /**
      * generate the new colonies and items, reproduces the colonies and expands them
      */
