@@ -27,6 +27,7 @@ interface IWorld{
      * Moves the player to the new position
      */
     fun moveTo(position: Position)
+
     /**
      * The player exterminates the plague
      */

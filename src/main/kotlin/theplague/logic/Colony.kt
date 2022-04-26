@@ -2,7 +2,7 @@ package theplague.logic
 
 import theplague.interfaces.Iconizable
 
-sealed class Colony(val size: Int, override val icon: String): Iconizable {
+sealed class Colony(val size: Int, val icon: Iconizable) {
     fun willReproduce(): Boolean{return false}
     fun reproduce(){}
     fun needsToExpand(){}

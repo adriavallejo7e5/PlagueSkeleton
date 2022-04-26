@@ -1,6 +1,9 @@
 package theplague.logic
 
 import theplague.interfaces.*
+import theplague.ui.console.WorldUi
+import kotlin.math.abs
+import kotlin.math.max
 import kotlin.random.Random
 
 
@@ -11,10 +14,10 @@ class World(
     override val territories: MutableList<List<Territory>>
 ): IWorld {
     override fun nextTurn() {
-        TODO("Not yet implemented")
+
         /*
         Assegura't de que et funciona tot abans d'implementar cada una de les fases
-        - Generar noves colònie
+        - Generar noves colònies
         - Generar nous ítems
         - Reproducció
         - Expansió
@@ -23,23 +26,34 @@ class World(
 
     override fun gameFinished(): Boolean {
         TODO("Not yet implemented")
+
     }
 
     override fun canMoveTo(position: Position): Boolean {
-        TODO("Not yet implemented")
+        val dist = max(abs(position.y - player.position.y) , abs(position.x - player.position.x))
+        return dist < 3
     }
 
     override fun moveTo(position: Position) {
-//        val lastTerr =
-//        val lastTerr =
+        val lastTerr : ITerritory = territories[player.position.y][player.position.x]
+        val targetTerr : ITerritory = territories[position.y][position.x]
+
+        lastTerr.iconList().remove(player.currentVehicle)
+        targetTerr.iconList().remove(player.currentVehicle)
+
+        player.position = Position(position.x, position.y)
     }
 
     override fun exterminate() {
-        TODO("Not yet implemented")
+        //TODO
+        println("Exterminate")
     }
 
     override fun takeableItem(): Iconizable? {
         TODO("Not yet implemented")
+//        when(){
+//
+//        }
     }
 
     override fun takeItem() {
@@ -52,8 +66,10 @@ class World(
         return Position(x, y)
     }
 
-    fun generateNewColonies(){
-
+    fun generateNewColonies(num: Int){
+        when(num){
+            30 ->
+        }
     }
     fun place(){}
     fun generateNewItems(){}

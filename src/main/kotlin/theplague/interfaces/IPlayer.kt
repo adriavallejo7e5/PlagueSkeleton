@@ -1,23 +1,23 @@
 package theplague.interfaces
 
-import theplague.logic.Vehicle
-import theplague.logic.Weapon
 
-interface IPlayer {
+interface IPlayer: Iconizable {
     /**
      * Turns that the player has lived
      */
-    var turns : Int
+    val turns : Int
 
     val livesLeft: Int
 
     /**
      * The player current weapon
      */
-    val currentWeapon : Weapon
+    val currentWeapon : Iconizable
 
     /**
      * The player current vehicle
      */
-    val currentVehicle : Vehicle
+    val currentVehicle : Iconizable
+
+    var position: Position
 }

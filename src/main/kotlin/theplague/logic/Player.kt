@@ -5,12 +5,12 @@ import theplague.interfaces.Iconizable
 import theplague.interfaces.Position
 
  class Player (
-     override var turns: Int,
+     override val turns: Int,
      override val livesLeft: Int,
-     override val currentWeapon: Weapon,
-     override val currentVehicle: Vehicle,
-     override val icon : String = "🚶",
-     var position: Position
-        ): IPlayer, Iconizable{
+     override val currentWeapon: Iconizable,
+     override val currentVehicle: Iconizable,
+     val icon : Iconizable,
+     override var position: Position,
+     ): IPlayer{
 
         }
