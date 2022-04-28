@@ -1,4 +1,11 @@
 package theplague.logic
 
-class OnFoot(timesLeft: Int, icon: String = "🚶") : Vehicle(timesLeft, icon) {
+import theplague.interfaces.Iconizable
+
+
+class OnFoot() : Vehicle(4,"🚶"){
+    override var icon: Iconizable
+        get() = TODO("Not yet implemented")
+        set(value) {}
+
 }

@@ -1,5 +1,8 @@
 package theplague.interfaces
 
+import theplague.logic.Hand
+import theplague.logic.OnFoot
+
 
 interface IPlayer: Iconizable {
     /**
@@ -12,12 +15,12 @@ interface IPlayer: Iconizable {
     /**
      * The player current weapon
      */
-    val currentWeapon : Iconizable
+    val currentWeapon : Hand
 
     /**
      * The player current vehicle
      */
-    val currentVehicle : Iconizable
+    val currentVehicle : OnFoot
 
     var position: Position
 }

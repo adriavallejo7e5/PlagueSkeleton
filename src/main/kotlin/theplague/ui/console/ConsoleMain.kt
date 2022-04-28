@@ -8,7 +8,7 @@ fun main() {
     val width = 8
     val height = 8
 
-    val player = Player(0, 15, Hand(4), OnFoot(4), "🚶", Position(
+    val player = Player(0, 15, Hand(), OnFoot(), "🚶", Position(
         3, 4
     ))
 
