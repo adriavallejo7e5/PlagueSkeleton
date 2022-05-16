@@ -1,11 +1,10 @@
 package theplague.logic
 
-import theplague.interfaces.Iconizable
 
-class Hand() : Weapon(4) {
-    override val icon: Iconizable
-        get() = ""
-
-//metodo correcto
+class Hand : Weapon() {
+    override var turnLeft: Int = -1
+    override val hasTurnsLimit: Boolean = false
+    override val icon: String
+        get() = "👆"
 }
 

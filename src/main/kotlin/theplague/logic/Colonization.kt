@@ -1,6 +1,7 @@
 package theplague.logic
 
-class Colonization(
-    val colony: Colony
-) {
+import theplague.interfaces.Position
+
+data class Colonization ( val colony: Colony, val position: Position) {
+
 }

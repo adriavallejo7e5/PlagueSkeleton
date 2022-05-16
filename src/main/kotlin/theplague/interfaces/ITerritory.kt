@@ -1,9 +1,16 @@
 package theplague.interfaces
 
 interface ITerritory {
-    val name: IPlayer
     /**
      * List of icons of the current territory (4 max)
      */
-    fun iconList() : MutableList<Iconizable>
+    fun iconList() : List<Iconizable>
+
+    fun addIcon(icon: Iconizable)
+    fun removeIcon(icon: Iconizable)
+
+
+    val icons : MutableList<Iconizable>
+
+
 }

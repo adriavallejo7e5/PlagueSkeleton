@@ -6,7 +6,7 @@ pluginManagement {
         gradlePluginPortal()
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
-    
+
 }
 ```
 
@@ -23,25 +23,25 @@ plugins {
 
 
 repositories {
-google()
-mavenCentral()
-maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+    google()
+    mavenCentral()
+    maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
 }
 
 
 dependencies {
-implementation(compose.desktop.currentOs)
+    implementation(compose.desktop.currentOs)
 }
 
 
 compose.desktop {
-application {
-mainClass = "MainKt"
-nativeDistributions {
-targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-packageName = "ThePlague"
-packageVersion = "1.0.0"
-}
-}
+    application {
+        mainClass = "MainKt"
+        nativeDistributions {
+            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
+            packageName = "ThePlague"
+            packageVersion = "1.0.0"
+        }
+    }
 }
 ```

@@ -1,5 +1,5 @@
 package theplague.interfaces
 
 interface Iconizable{
-    val icon : Iconizable
+    val icon : String
 }
